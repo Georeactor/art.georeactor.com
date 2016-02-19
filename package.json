@@ -1,7 +1,7 @@
 {
-  "name": "art-map",
+  "name": "texture-maps",
   "version": "1.0.0",
-  "description": "",
+  "description": "Make-your-own texture maps for MapBoxGL, based on Van Gogh Map",
   "scripts": {
     "test": "mocha"
   },
