@@ -14,7 +14,7 @@ Installation requires NodeJS, MongoDB, a Cloudinary account, and cairo for image
 git clone https://github.com/mapmeld/texture-maps.git
 cd texture-maps
 npm install
-node app.js
+npm start
 ```
 
 ## License

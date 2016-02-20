@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Make-your-own texture maps for MapBoxGL, based on Van Gogh Map",
   "scripts": {
+    "start": "node app.js",
     "test": "mocha"
   },
   "author": "Nick Doiron <ndoiron@mapmeld.com>",
