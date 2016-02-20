@@ -17,8 +17,11 @@ $(function() {
       "layers": [
         {
           "id": "background",
-          "style": {
-            "background-color": "#fff"
+          "paint": {
+            "background-color": "#444"
+          },
+          "layout": {
+            "visibility": "visible"
           },
           "type": "background"
         }, {
@@ -26,7 +29,7 @@ $(function() {
           "source": "mapbox",
           "source-layer": "landcover",
           "filter": ["==", "class", "snow" ],
-          "style": { "fill-image": "snow" },
+          "paint": { "fill-pattern": "snow", "fill-opacity": 1 },
           "type": "fill"
         },
         {
@@ -34,35 +37,35 @@ $(function() {
           "source": "mapbox",
           "source-layer": "landcover",
           "filter": ["==", "class", "crop" ],
-          "style": { "fill-image": "farm" },
+          "paint": { "fill-pattern": "farm", "fill-opacity": 1 },
           "type": "fill"
         }, {
           "id": "landcover_grass",
           "source": "mapbox",
           "source-layer": "landcover",
           "filter": ["==", "class", "grass" ],
-          "style": { "fill-image": "grass" },
+          "paint": { "fill-pattern": "grass", "fill-opacity": 1 },
           "type": "fill"
         }, {
           "id": "landcover_wood",
           "source": "mapbox",
           "source-layer": "landcover",
           "filter": ["==", "class", "wood" ],
-          "style": { "fill-image": "wood" },
+          "paint": { "fill-pattern": "wood", "fill-opacity": 1 },
           "type": "fill"
         }, {
           "id": "landuse_wood",
           "source": "mapbox",
           "source-layer": "landuse",
           "filter": ["==", "class", "wood" ],
-          "style": { "fill-image": "wood" },
+          "paint": { "fill-pattern": "wood", "fill-opacity": 1 },
           "type": "fill"
         }, {
           "id": "water",
           "source": "mapbox",
           "source-layer": "water",
-          "style": {
-            "fill-image": "water",
+          "paint": {
+            "fill-pattern": "water",
             "fill-outline-color": "#a2bdc0"
           },
           "type": "fill"
@@ -72,7 +75,7 @@ $(function() {
           "source": "mapbox",
           "source-layer": "landuse",
           "filter": ["==", "class", "park" ],
-          "style": { "fill-image": "grass" },
+          "paint": { "fill-pattern": "grass", "fill-opacity": 1 },
           "type": "fill"
         },
         {
@@ -80,7 +83,7 @@ $(function() {
           "source": "mapbox",
           "source-layer": "landuse",
           "filter": ["==", "class", "industrial" ],
-          "style": { "fill-image": "urban" },
+          "paint": { "fill-pattern": "urban" },
           "type": "fill"
         },
         {
@@ -88,14 +91,14 @@ $(function() {
           "source": "mapbox",
           "source-layer": "landuse",
           "filter": ["==", "class", "residential" ],
-          "style": { "fill-image": "urban" },
+          "paint": { "fill-pattern": "urban" },
           "type": "fill"
         },
         {
           "id": "building",
           "source": "mapbox",
           "source-layer": "building",
-          "style": { "fill-image": "urban" },
+          "paint": { "fill-pattern": "urban" },
           "type": "fill"
         },
         {
@@ -103,7 +106,7 @@ $(function() {
           "source": "mapbox",
           "source-layer": "landuse",
           "filter": ["==", "class", "commercial" ],
-          "style": { "fill-image": "urban" },
+          "paint": { "fill-pattern": "urban" },
           "type": "fill"
         },
         {
@@ -111,7 +114,7 @@ $(function() {
           "source": "mapbox",
           "source-layer": "landuse",
           "filter": ["==", "class", "grass" ],
-          "style": { "fill-image": "grass" },
+          "paint": { "fill-pattern": "grass" },
           "type": "fill"
         },
         {
@@ -119,7 +122,7 @@ $(function() {
           "source": "mapbox",
           "source-layer": "landuse",
           "filter": ["==", "class", "crop" ],
-          "style": { "fill-image": "farm" },
+          "paint": { "fill-pattern": "farm" },
           "type": "fill"
         },
         {
@@ -127,7 +130,7 @@ $(function() {
           "source": "mapbox",
           "source-layer": "landuse",
           "filter": ["==", "class", "rock" ],
-          "style": { "fill-image": "rock" },
+          "paint": { "fill-pattern": "rock" },
           "type": "fill"
         },
         {
@@ -135,7 +138,7 @@ $(function() {
           "source": "mapbox",
           "source-layer": "landuse",
           "filter": ["==", "class", "snow" ],
-          "style": { "fill-image": "snow" },
+          "paint": { "fill-pattern": "snow" },
           "type": "fill"
         }
       ]
