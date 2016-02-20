@@ -1,0 +1,58 @@
+{
+    "urban": {
+      "x": 0,
+      "y": 0,
+      "width": 222,
+      "height": 97,
+      "pixelRatio": 1,
+      "sdf": false
+    },
+    "snow": {
+      "x": 0,
+      "y": 304,
+      "width": 222,
+      "height": 78,
+      "pixelRatio": 1,
+      "sdf": false
+    },
+    "water": {
+      "x": 0,
+      "y": 579,
+      "width": 222,
+      "height": 112,
+      "pixelRatio": 1,
+      "sdf": false
+    },
+    "farm": {
+      "x": 0,
+      "y": 98,
+      "width": 222,
+      "height": 205,
+      "pixelRatio": 2,
+      "sdf": false
+    },
+    "grass": {
+      "x": 0,
+      "y": 382,
+      "width": 222,
+      "height": 197,
+      "pixelRatio": 2,
+      "sdf": false
+    },
+    "rock": {
+      "x": 0,
+      "y": 692,
+      "width": 222,
+      "height": 235,
+      "pixelRatio": 1,
+      "sdf": false
+    },
+    "wood": {
+      "x": 0,
+      "y": 927,
+      "width": 222,
+      "height": 173,
+      "pixelRatio": 2,
+      "sdf": false
+    }
+}

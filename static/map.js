@@ -6,7 +6,7 @@ $(function() {
     zoom: 6,
     style: {
       "version": 8,
-      "sprite": "sprite",
+      "sprite": "halfsprite",
       "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
       "sources": {
         "mapbox": {
