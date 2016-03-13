@@ -34,6 +34,10 @@ table.grid img {
   max-width: 100px;
 }
 
+.btn {
+  margin: 12px;
+}
+
 @media (max-width: 767px) {
   iframe {
     display: none;

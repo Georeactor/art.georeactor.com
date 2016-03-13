@@ -61,6 +61,7 @@ $(function() {
     }, function (data) {
       if (data.success) {
         $('#map').html('');
+        $('.reveal').removeClass('hide').attr('href', '/map/view/' + data._id);
         renderMap(bgcolor, '/sprite/' + data._id);
       }
     });

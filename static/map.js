@@ -1,5 +1,5 @@
 function renderMap(myBackground, spriteID) {
-  console.log(myBackground);
+  console.log(spriteID);
   mapboxgl.accessToken = "pk.eyJ1IjoibWFwbWVsZCIsImEiOiI0a1NzYW53In0.2gQTd6k9Ghw8UBK4DsciLA";
 
   var map = new mapboxgl.Map({
@@ -32,6 +32,14 @@ function renderMap(myBackground, spriteID) {
           "source-layer": "landcover",
           "filter": ["==", "class", "snow" ],
           "paint": { "fill-pattern": "snow", "fill-opacity": 1 },
+          "type": "fill"
+        },
+        {
+          "id": "landcover_sand",
+          "source": "mapbox",
+          "source-layer": "landcover",
+          "filter": ["==", "class", "sand" ],
+          "paint": { "fill-pattern": "sand", "fill-opacity": 1 },
           "type": "fill"
         },
         {
@@ -142,6 +150,14 @@ function renderMap(myBackground, spriteID) {
           "filter": ["==", "class", "snow" ],
           "paint": { "fill-pattern": "snow" },
           "type": "fill"
+        },
+        {
+          "id": "landuse_sand",
+          "type": "fill",
+          "source": "mapbox",
+          "source-layer": "landuse",
+          "filter": ["==", "class", "sand" ],
+          "paint": { "fill-pattern": "sand" }
         }
       ]
     }

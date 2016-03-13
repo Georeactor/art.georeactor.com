@@ -6,7 +6,7 @@ $(function() {
     zoom: 6,
     style: {
       "version": 8,
-      "sprite": "halfsprite",
+      "sprite": spriteID,
       "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
       "sources": {
         "mapbox": {
@@ -115,6 +115,14 @@ $(function() {
           "source-layer": "landuse",
           "filter": ["==", "class", "grass" ],
           "paint": { "fill-pattern": "grass" },
+          "type": "fill"
+        },
+        {
+          "id": "landuse_sand",
+          "source": "mapbox",
+          "source-layer": "landuse",
+          "filter": ["==", "class", "sand" ],
+          "paint": { "fill-pattern": "sand" },
           "type": "fill"
         },
         {

@@ -31,7 +31,7 @@ html
               td.type Background
               td.color(colspan="2")
                 span Solid Color Only:&nbsp;&nbsp&nbsp;
-                input#bg-color.color(type='text')
+                input#bg-color.color(type='text', value='#444')
             tr
               td.type Water
               td.source
@@ -61,28 +61,34 @@ html
               td.source
               td.output
             tr
-              td.type Park
+              td.type Urban
               td.source
               td.output
-            tr
-              td.type Residential
-              td.source
-              td.output
-            tr
-              td.type Commercial
-              td.source
-              td.output
-            tr
-              td.type Industrial
-              td.source
-              td.output
-            tr
-              td.type Building
-              td.source
-              td.output
+            //
+              tr
+                td.type Park
+                td.source
+                td.output
+              tr
+                td.type Residential
+                td.source
+                td.output
+              tr
+                td.type Commercial
+                td.source
+                td.output
+              tr
+                td.type Industrial
+                td.source
+                td.output
+              tr
+                td.type Building
+                td.source
+                td.output
       .row
         .col-sm-12
           a.btn.btn-primary.update-map Update Map?
+          a.btn.btn-success.hide.reveal(href="/map/view/56e4c6e96a436ee349bdf80f", target="_blank") Shareable Map 
           #map
           
     // mapboxgl
