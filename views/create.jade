@@ -4,10 +4,98 @@ html
     meta(charset="utf-8")
     meta(name="viewport", content="initial-scale=1,maximum-scale=1,user-scalable=no")
     title Texture Maps
+    
+    // bootstrap
+    link(rel="stylesheet", type="text/css", href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+    
+    // mapboxgl
     link(rel="stylesheet", type="text/css", href="//api.tiles.mapbox.com/mapbox-gl-js/v0.14.2/mapbox-gl.css")
-    link(rel="stylesheet", type="text/css", href="style.css")
-  body
-    #map
+    
+    // 3rd party editing tools
+    link(rel="stylesheet", type="text/css", href="/spectrum.css")
+    link(rel="stylesheet", type="text/css", href="/cropper.min.css")
+    
+    // texture-maps css
+    link(rel="stylesheet", type="text/css", href="/style.css")
+  body.editor
+    input.csrf(type="hidden", value=csrfToken)
+    .container
+      .row
+        .col-sm-12
+          table.table
+            thead
+              th Texture
+              th Source Image
+              th Output Image
+            tr
+              td.type Background
+              td.color(colspan="2")
+                span Solid Color Only:&nbsp;&nbsp&nbsp;
+                input#bg-color.color(type='text')
+            tr
+              td.type Water
+              td.source
+              td.output
+            tr
+              td.type Farm
+              td.source
+              td.output
+            tr
+              td.type Wood
+              td.source
+              td.output
+            tr
+              td.type Grass
+              td.source
+              td.output
+            tr
+              td.type Sand / Desert
+              td.source
+              td.output
+            tr
+              td.type Rock
+              td.source
+              td.output
+            tr
+              td.type Snow
+              td.source
+              td.output
+            tr
+              td.type Park
+              td.source
+              td.output
+            tr
+              td.type Residential
+              td.source
+              td.output
+            tr
+              td.type Commercial
+              td.source
+              td.output
+            tr
+              td.type Industrial
+              td.source
+              td.output
+            tr
+              td.type Building
+              td.source
+              td.output
+      .row
+        .col-sm-12
+          a.btn.btn-primary.update-map Update Map?
+          #map
+          
+    // mapboxgl
     script(type="text/javascript", src="/mapboxgl.js")
+    
+    // jquery
     script(type="text/javascript", src="//code.jquery.com/jquery-1.12.0.min.js")
+    
+    // 3rd-party editing tools
+    script(type="text/javascript", src="/spectrum.js")
+    script(type="text/javascript", src="/cropper.min.js")
+    
+    // texture-maps    
+    script(type="text/javascript", src="/editor.js")
     script(type="text/javascript", src="/map.js")
+    script(type="text/javascript") $(function() { renderMap('#444', '/halfsprite'); });

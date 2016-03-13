@@ -17,6 +17,12 @@ npm install
 npm start
 ```
 
+## Libraries
+
+* MapBoxGL.js
+* Cropper from https://github.com/fengyuanchen/cropper
+* Spectrum color-picker from https://bgrins.github.io/spectrum/
+
 ## License
 
 Open source, MIT license

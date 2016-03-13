@@ -1,14 +1,12 @@
-function renderMap(myBackground, spriteID) {
-  console.log(myBackground);
+$(function() {
   mapboxgl.accessToken = "pk.eyJ1IjoibWFwbWVsZCIsImEiOiI0a1NzYW53In0.2gQTd6k9Ghw8UBK4DsciLA";
-
   var map = new mapboxgl.Map({
     container: 'map',
-    center: [-79.595, 21.624],
+    center: [-73.26, 42.786],
     zoom: 6,
     style: {
       "version": 8,
-      "sprite": spriteID,
+      "sprite": "halfsprite",
       "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
       "sources": {
         "mapbox": {
@@ -20,7 +18,7 @@ function renderMap(myBackground, spriteID) {
         {
           "id": "background",
           "paint": {
-            "background-color": myBackground
+            "background-color": "#444"
           },
           "layout": {
             "visibility": "visible"
@@ -144,6 +142,7 @@ function renderMap(myBackground, spriteID) {
           "type": "fill"
         }
       ]
-    }
+    },
+    hash: true
   });
-}
+});

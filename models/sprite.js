@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 var spriteSchema = mongoose.Schema({
   name: String,
-  images: [Object],
+  images: Object,
   width: Number,
   height: Number
 });
