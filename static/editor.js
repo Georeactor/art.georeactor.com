@@ -8,6 +8,8 @@ $(function() {
     preferredFormat: 'hex'
   });
 
+  var snapout, ctx;
+
   // source image selector and grid preview
   $('.source').each(function(i, col) {
     var imagePick = $("<input type='file'/>");
@@ -32,6 +34,25 @@ $(function() {
           $(td).append(pngimg);
         });
         row.find('.output').html('').append(texturegrid);
+
+        var pp = new Image();
+        pp.onload = function() {
+          snapout = $('<canvas>').attr('width', pp.width).attr('height', pp.height)[0];
+          ctx = snapout.getContext('2d')
+          ctx.drawImage(pp, 0, 0);
+        };
+        pp.src = png;
+
+        var startimg = $('<img/>').attr('src', png);
+        row.find('.crop').addClass('activate').html(startimg);
+        row.find('.crop img').cropper({
+          crop: function (e) {
+            var imageData = ctx.getImageData(e.x, e.y, e.width, e.height);
+            var outt = $('<canvas>').attr('height', e.height).attr('width', e.width)[0];
+            outt.getContext('2d').putImageData(imageData, 0, 0);
+            texturegrid.find('img').attr('src', outt.toDataURL());
+          }
+        });
       };
       reader.readAsDataURL(img);
     });

@@ -38,6 +38,16 @@ table.grid img {
   margin: 12px;
 }
 
+.crop.activate {
+  width: 300px;
+  height: 300px;
+}
+
+.crop.activate img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 @media (max-width: 767px) {
   iframe {
     display: none;

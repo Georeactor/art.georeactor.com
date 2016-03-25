@@ -26,43 +26,52 @@ html
             thead
               th Texture
               th Source Image
+              th Crop
               th Output Image
             tr
               td.type Background
-              td.color(colspan="2")
+              td.color(colspan="3")
                 span Solid Color Only:&nbsp;&nbsp&nbsp;
                 input#bg-color.color(type='text', value='#444')
             tr
               td.type Water
               td.source
+              td.crop
               td.output
             tr
               td.type Farm
               td.source
+              td.crop
               td.output
             tr
               td.type Wood
               td.source
+              td.crop
               td.output
             tr
               td.type Grass
               td.source
+              td.crop
               td.output
             tr
               td.type Sand / Desert
               td.source
+              td.crop
               td.output
             tr
               td.type Rock
               td.source
+              td.crop
               td.output
             tr
               td.type Snow
               td.source
+              td.crop
               td.output
             tr
               td.type Urban
               td.source
+              td.crop
               td.output
             //
               tr
@@ -90,14 +99,14 @@ html
           a.btn.btn-primary.update-map Update Map?
           a.btn.btn-success.hide.reveal(href="/map/view/56e4c6e96a436ee349bdf80f", target="_blank") Shareable Map 
           #map
-          
+
     // mapboxgl
     script(type="text/javascript", src="/mapboxgl.js")
     
     // jquery
     script(type="text/javascript", src="//code.jquery.com/jquery-1.12.0.min.js")
     
-    // 3rd-party editing tools
+    // 3rd-party libraries
     script(type="text/javascript", src="/spectrum.js")
     script(type="text/javascript", src="/cropper.min.js")
     
