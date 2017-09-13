@@ -1,5 +1,7 @@
 # texture-maps
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Georeactor/art.georeactor.com.svg)](https://greenkeeper.io/)
+
 My [Van Gogh Map](http://mapmeld.github.io/van-gogh-map/#5.12/43.218/-71.686) has always had a couple of empty
 dropdowns in it.
 
